@@ -5,8 +5,7 @@ body {
 }
 
 .root {
-    font-family: Arial, sans-serif;
-    font-size: 12px;
+    --font-size: 12px;
 }
 
 .container_wp {
@@ -59,7 +58,7 @@ body {
 label {
     display: block;
     margin-bottom: 5px;
-
+    font-weight: 700;
 }
 
 input {
@@ -101,6 +100,7 @@ input {
 }
 
 h2 {
+    font-weight: 900;
     padding-bottom: 20px;
 }
 
