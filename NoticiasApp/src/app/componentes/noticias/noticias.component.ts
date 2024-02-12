@@ -20,12 +20,12 @@ export class NoticiasComponent {
 
   publicar() {
     this.arrNoticias.push(this.newNoticia);
-    console.log(this.newNoticia)
     this.newNoticia = {
       'titulo': "",
       'imagen': "",
       'texto': "",
       'fecha': "",
     }
+    console.log(this.newNoticia)
   }
 }
