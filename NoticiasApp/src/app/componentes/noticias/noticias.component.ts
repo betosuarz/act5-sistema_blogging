@@ -26,7 +26,7 @@ export class NoticiasComponent {
       'texto': "",
       'fecha': "",
     }
-    console.log(this.newNoticia)
+    console.log(this.arrNoticias)
   }
 
   cargarNoticias(): string {
