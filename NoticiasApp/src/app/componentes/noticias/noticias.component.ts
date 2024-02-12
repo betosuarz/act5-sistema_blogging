@@ -2,6 +2,7 @@
 import { Component } from '@angular/core';
 import { signalSetFn } from '@angular/core/primitives/signals';
 import { FormsModule } from '@angular/forms';
+import { INoticia } from '../../interfaces/inoticia.interface';
 
 @Component({
   selector: 'app-noticias',
@@ -11,13 +12,28 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './noticias.component.css'
 })
 export class NoticiasComponent {
-  arrNoticias: any[] = [
+  arrNoticias: INoticia[] = [
+  {
+    titulo: "Nueva exposición en el museo de arte",
+    imagen: "https://ejemplo.com/imagen1.jpg",
+    texto: "El museo de arte inaugura una nueva exposición que incluye obras de artistas locales e internacionales.",
+    fecha: "2024-02-10"
+  },
+  {
+    titulo: "Inauguración de nueva biblioteca municipal",
+    imagen: "https://ejemplo.com/imagen2.jpg",
+    texto: "La nueva biblioteca municipal abre sus puertas al público, ofreciendo una amplia colección de libros y recursos para la comunidad.",
+    fecha: "2024-02-09"
+  }
   ]
+  insertData($event: any): void {
+    this.arrNoticias.push($event);
+  }
   newNoticia: any = {
     'titulo': "",
     'imagen': "",
     'texto': "",
-    'fecha': "",
+     'fecha': "",
   }
 
   publicar() {
