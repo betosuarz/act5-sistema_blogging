@@ -9,6 +9,8 @@
         <input type="url_img" id="url_img" name="url_img" placeholder="Pega el link de la imagen" [(ngModel)]="newNoticia.imagen">
         <label for="cuerpo">Texto o cuerpo:</label>
         <input class="cuerpo_new" type="cuerpo" id="cuerpo" name="cuerpo" placeholder="Escribe la noticia" [(ngModel)]="newNoticia.texto">
+        <label for="autor">Autor:</label>
+        <input class="autor" type="autor" id="autor" name="autor" placeholder="Escribe tu nombre" [(ngModel)]="newNoticia.autor">
         <label for="fecha_pub">Fecha de publicación:</label>
         <input type="date" id="fecha_pub" name="fecha_pub" [(ngModel)]="newNoticia.fecha">
         <button class="publicar-btn" (click)="publicar()">Publicar</button>
@@ -24,6 +26,7 @@
                     <div class="mini-section1">
                         <h3>Título</h3>
                         <p>Texto de varias líneas para la sub-sección.</p>
+                        <p>Nombre del autor de la publicación.</p>
                         <p class="text-date">Fecha de publicación</p>
                     </div>
                     <div class="mini-section2">
