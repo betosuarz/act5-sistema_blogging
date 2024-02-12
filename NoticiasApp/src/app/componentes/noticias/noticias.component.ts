@@ -11,4 +11,10 @@ import { FormsModule } from '@angular/forms';
 export class NoticiasComponent {
   arrNoticias: any[] = [
   ]
+  newNoticia: any = {
+    'titulo': "",
+    'imagen': "",
+    'texto': "",
+    'fecha': "",
+  }
 }
