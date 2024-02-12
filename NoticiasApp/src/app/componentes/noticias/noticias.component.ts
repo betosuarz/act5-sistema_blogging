@@ -5,35 +5,35 @@ import { FormsModule } from '@angular/forms';
 import { INoticia } from '../../interfaces/inoticia.interface';
 
 @Component({
-  selector: 'app-noticias',
-  standalone: true,
-  imports: [FormsModule],
-  templateUrl: './noticias.component.html',
-  styleUrl: './noticias.component.css'
+	selector: 'app-noticias',
+	standalone: true,
+	imports: [FormsModule],
+	templateUrl: './noticias.component.html',
+	styleUrl: './noticias.component.css'
 })
 export class NoticiasComponent {
-  arrNoticias: INoticia[] = [
-  {
-    titulo: "Nueva exposición en el museo de arte",
-    imagen: "https://ejemplo.com/imagen1.jpg",
-    texto: "El museo de arte inaugura una nueva exposición que incluye obras de artistas locales e internacionales.",
-    fecha: "2024-02-10"
-  },
-  {
-    titulo: "Inauguración de nueva biblioteca municipal",
-    imagen: "https://ejemplo.com/imagen2.jpg",
-    texto: "La nueva biblioteca municipal abre sus puertas al público, ofreciendo una amplia colección de libros y recursos para la comunidad.",
-    fecha: "2024-02-09"
-  }
+	arrNoticias: INoticia[] = [
+	{
+		titulo: "Nueva exposición en el museo de arte",
+		imagen: "https://placehold.co/ejemplo1/600x400",
+		texto: "El museo de arte inaugura una nueva exposición que incluye obras de artistas locales e internacionales.",
+		fecha: "2024-02-10"
+	},
+	{
+		titulo: "Inauguración de nueva biblioteca municipal",
+		imagen: "https://placehold.co/ejemplo2/600x400",
+		texto: "La nueva biblioteca municipal abre sus puertas al público, ofreciendo una amplia colección de libros y recursos para la comunidad.",
+		fecha: "2024-02-09"
+	}
   ]
   insertData($event: any): void {
-    this.arrNoticias.push($event);
+    	this.arrNoticias.push($event);
   }
   newNoticia: any = {
-    'titulo': "",
-    'imagen': "",
-    'texto': "",
-     'fecha': "",
+		'titulo': "",
+		'imagen': "",
+		'texto': "",
+		'fecha': "",
   }
 
   publicar() {
@@ -58,14 +58,14 @@ export class NoticiasComponent {
   cargarNoticias(): string {
     let html: string = "";
     this.arrNoticias.forEach((noticia: any) => { 
-      html += `
-        <div class="noticia">
-          <h2>${noticia.titulo}</h2>
-          <img src="${noticia.imagen}" alt="${noticia.titulo}">
-          <p>${noticia.texto}</p>
-          <p>Fecha de publicación: ${noticia.fecha}</p>
-        </div>
-      `;
+		html += `
+			<div class="noticia">
+			<h2>${noticia.titulo}</h2>
+			<img src="${noticia.imagen}" alt="${noticia.imagen}">
+			<p>${noticia.texto}</p>
+			<p>Fecha de publicación: ${noticia.fecha}</p>
+			</div>
+		`;
     });
     return html;
   }   
