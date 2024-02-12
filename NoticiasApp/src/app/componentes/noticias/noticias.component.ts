@@ -49,8 +49,8 @@ export class NoticiasComponent {
 				'autor': "",
 				'fecha': "",
 			};
-		console.log(this.arrNoticias)
 		alert('¡Enhorabuena, su noticia se ha publicado satisfactoriamente!');
+		console.log(this.arrNoticias)
     } else {
 		alert('Por favor, complete todos los campos para enviar la noticia');
 		}
