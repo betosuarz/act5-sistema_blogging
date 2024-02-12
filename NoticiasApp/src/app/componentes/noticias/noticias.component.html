@@ -16,28 +16,20 @@
 
 
     <!-- PINTAR DATOS -->
-    <section class="section2" [innerHTML]="cargarNoticias()">
+    <div class="div-flex">
         <h2 class="new_title">Últimas Noticias</h2>
-        <div class="sub-section">
-            <div class="mini-section1">
-                <h3>Título 1</h3>
-                <p>Texto de varias líneas para la primera sub-sección.</p>
-                <p class="text-date">Fecha de publicación: 02/02/2022</p>
-            </div>
-            <div class="mini-section2">
-                <img class="img_abs" src="" alt="Imagen 1">
-            </div>
+        <div class="section2">
+            <section [innerHTML]="cargarNoticias()">
+                <div class="sub-section">
+                    <div class="mini-section1">
+                        <h3>Título</h3>
+                        <p>Texto de varias líneas para la sub-sección.</p>
+                        <p class="text-date">Fecha de publicación</p>
+                    </div>
+                    <div class="mini-section2">
+                        <img class="img_abs" src="" alt="Imagen 1">
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="sub-section">
-            <div class="mini-section1">
-                <h3>Título 2</h3>
-                <p>Texto de varias líneas para la segunda sub-sección.</p>
-                <p class="text-date">Fecha de publicación: 02/02/2022</p>
-            </div>
-            <div class="mini-section2">
-                <img class="img_abs" src="" alt="Imagen 2">
-            </div>
-        </div>
-    </section>
-
-</div>
+    </div>
