@@ -4,13 +4,13 @@
         <!-- CAPTURAR DATOS -->
         <h2 class="new_title">Escribe tu noticia</h2>
         <label for="fname">Título:</label>
-        <input type="text" id="fname" name="fname" placeholder="Escribe el título de la noticia">
+        <input type="text" id="fname" name="fname" placeholder="Escribe el título de la noticia" [(ngModel)]="newNoticia.titulo">
         <label for="url_img">Url de la imagen:</label>
-        <input type="url_img" id="url_img" name="url_img" placeholder="Pega el link de la imagen">
+        <input type="url_img" id="url_img" name="url_img" placeholder="Pega el link de la imagen" [(ngModel)]="newNoticia.imagen">
         <label for="cuerpo">Texto o cuerpo:</label>
-        <input class="cuerpo_new" type="cuerpo" id="cuerpo" name="cuerpo" placeholder="Escribe la noticia">
+        <input class="cuerpo_new" type="cuerpo" id="cuerpo" name="cuerpo" placeholder="Escribe la noticia" [(ngModel)]="newNoticia.texto">
         <label for="fecha_pub">Fecha de publicación:</label>
-        <input type="date" id="fecha_pub" name="fecha_pub">
+        <input type="date" id="fecha_pub" name="fecha_pub" [(ngModel)]="newNoticia.fecha">
         <button>Publicar</button>
     </section>
 
