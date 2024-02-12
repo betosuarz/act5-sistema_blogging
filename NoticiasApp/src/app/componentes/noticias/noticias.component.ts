@@ -17,12 +17,14 @@ export class NoticiasComponent {
 		titulo: "Nueva exposición en el museo de arte",
 		imagen: "https://placehold.co/ejemplo1/600x400",
 		texto: "El museo de arte inaugura una nueva exposición que incluye obras de artistas locales e internacionales.",
+		autor: "Sofía Rodríguez Martínez",
 		fecha: "2024-02-10"
 	},
 	{
 		titulo: "Inauguración de nueva biblioteca municipal",
 		imagen: "https://placehold.co/ejemplo2/600x400",
 		texto: "La nueva biblioteca municipal abre sus puertas al público, ofreciendo una amplia colección de libros y recursos para la comunidad.",
+		autor: "Martín García López",
 		fecha: "2024-02-09"
 	}
   	]
@@ -33,6 +35,7 @@ export class NoticiasComponent {
 		'titulo': "",
 		'imagen': "",
 		'texto': "",
+		'autor': "",
 		'fecha': "",
   	}
 
@@ -43,6 +46,7 @@ export class NoticiasComponent {
 				'titulo': "",
 				'imagen': "",
 				'texto': "",
+				'autor': "",
 				'fecha': "",
 			};
 		console.log(this.arrNoticias)
@@ -64,6 +68,7 @@ export class NoticiasComponent {
 			<h2>${noticia.titulo}</h2>
 			<img src="${noticia.imagen}" alt="${noticia.imagen}">
 			<p>${noticia.texto}</p>
+			<p>${noticia.autor}</p>
 			<p>Fecha de publicación: ${noticia.fecha}</p>
 			</div>
 		`;
