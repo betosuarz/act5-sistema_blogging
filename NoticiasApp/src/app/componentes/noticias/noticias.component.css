@@ -6,38 +6,38 @@ body {
 }
 
 .root {
-    font-family: --var(Arial, sans-serif);
-    font-size: --var(12px);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
 }
 
 .container_wp {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     border: 1px solid black;
     background-color: rgb(224, 224, 224);
     height: fit-content;
-    gap: 100px;
-    padding: 75px 150px;
-    max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    gap: 50px;
+    padding: 50px 0px;
+    max-width: 100%; 
 }
 
 .section1 {
-    width: 40%;
+    width: 70%;
     height: auto;    
-    flex-shrink: 0; /* Evita que este elemento se reduzca más allá de su ancho establecido */
+    flex-shrink: 0; 
 }
 
 .div-flex {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 60%;
     align-items: center;
+    width: 100%;
 }
 
 .section2 {
-    width: 100%;   
-    background-color: rgb(194, 194, 194);;
+    width: 60%;   
+    background-color: rgb(194, 194, 194);
     height: auto;    
     padding: 15px 40px;
     margin-bottom: 40px;
@@ -115,23 +115,28 @@ p {
     padding-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .container_wp {
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 0px;
-        gap: 50px
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 75px 100px;
+        gap: 100px
     }
 
     .section1 {
-        width: 50%;
+        width: 40%;
     }
 
     .section2 {
-        width: 50%;
+        width: 70%;
+    }
+
+    .div-flex {
+        width: 60%;
     }
 
     .new_title {
-        font-size: 1.75em;
+        font-size: 2rem;
     }
 }
