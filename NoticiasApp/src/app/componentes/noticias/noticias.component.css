@@ -18,25 +18,34 @@ body {
     height: fit-content;
     gap: 100px;
     padding: 75px 150px;
-
+    max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
 }
 
 .section1 {
     width: 40%;
     height: auto;    
+    flex-shrink: 0; /* Evita que este elemento se reduzca más allá de su ancho establecido */
+}
+
+.div-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+    align-items: center;
 }
 
 .section2 {
-    width: 60%;   
+    width: 100%;   
     background-color: rgb(194, 194, 194);;
     height: auto;    
-    padding: 20px;
+    padding: 15px 40px;
     margin-bottom: 40px;
 }
 
 .sub-section {
     margin-bottom: 20px;
-    padding: 20px 40px;
+    padding: 20px 100px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
