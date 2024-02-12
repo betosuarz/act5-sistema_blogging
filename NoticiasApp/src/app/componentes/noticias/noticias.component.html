@@ -11,7 +11,7 @@
         <input class="cuerpo_new" type="cuerpo" id="cuerpo" name="cuerpo" placeholder="Escribe la noticia" [(ngModel)]="newNoticia.texto">
         <label for="fecha_pub">Fecha de publicación:</label>
         <input type="date" id="fecha_pub" name="fecha_pub" [(ngModel)]="newNoticia.fecha">
-        <button>Publicar</button>
+        <button (click)="publicar()">Publicar</button>
     </section>
 
     <section class="section2">

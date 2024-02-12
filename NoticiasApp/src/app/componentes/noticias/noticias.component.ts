@@ -17,4 +17,9 @@ export class NoticiasComponent {
     'texto': "",
     'fecha': "",
   }
-}
+
+  publicar() {
+    this.arrNoticias.push(this.newNoticia);
+    console.log(this.newNoticia)
+    }
+  }
