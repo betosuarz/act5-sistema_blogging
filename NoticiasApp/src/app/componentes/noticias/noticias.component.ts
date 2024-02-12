@@ -47,7 +47,7 @@ export class NoticiasComponent {
           <h2>${noticia.titulo}</h2>
           <img src="${noticia.imagen}" alt="${noticia.titulo}">
           <p>${noticia.texto}</p>
-          <p>${noticia.fecha}</p>
+          <p>Fecha de publicación: ${noticia.fecha}</p>
         </div>
       `;
     });
