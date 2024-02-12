@@ -1,3 +1,4 @@
+
 import { Component } from '@angular/core';
 import { signalSetFn } from '@angular/core/primitives/signals';
 import { FormsModule } from '@angular/forms';
@@ -20,15 +21,23 @@ export class NoticiasComponent {
   }
 
   publicar() {
-    this.arrNoticias.push(this.newNoticia);
-    this.newNoticia = {
-      'titulo': "",
-      'imagen': "",
-      'texto': "",
-      'fecha': "",
-    }
-    console.log(this.arrNoticias)
-  }
+    if (this.camposObligatorios()) {
+      	this.arrNoticias.push(this.newNoticia);
+		this.newNoticia = {
+			'titulo': "",
+			'imagen': "",
+			'texto': "",
+			'fecha': "",
+		};
+		console.log(this.arrNoticias)
+    } else {
+		alert('Por favor, complete todos los campos para enviar la noticia');
+		}
+	}
+
+	camposObligatorios(): boolean {
+		return this.newNoticia.titulo && this.newNoticia.imagen && this.newNoticia.texto && this.newNoticia.fecha;
+	}
 
   cargarNoticias(): string {
     let html: string = "";
