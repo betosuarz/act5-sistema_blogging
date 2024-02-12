@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { signalSetFn } from '@angular/core/primitives/signals';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -30,8 +31,8 @@ export class NoticiasComponent {
   }
 
   cargarNoticias(): string {
-    let html = "";
-    this.arrNoticias.forEach((noticia) => { 
+    let html: string = "";
+    this.arrNoticias.forEach((noticia: any) => { 
       html += `
         <div class="noticia">
           <h2>${noticia.titulo}</h2>
@@ -42,5 +43,6 @@ export class NoticiasComponent {
       `;
     });
     return html;
-  }
+  }   
 }
+
