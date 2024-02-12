@@ -25,27 +25,28 @@ export class NoticiasComponent {
 		texto: "La nueva biblioteca municipal abre sus puertas al público, ofreciendo una amplia colección de libros y recursos para la comunidad.",
 		fecha: "2024-02-09"
 	}
-  ]
-  insertData($event: any): void {
+  	]
+  	insertData($event: any): void {
     	this.arrNoticias.push($event);
-  }
-  newNoticia: any = {
+  	}
+  	newNoticia: any = {
 		'titulo': "",
 		'imagen': "",
 		'texto': "",
 		'fecha': "",
-  }
+  	}
 
-  publicar() {
-    if (this.camposObligatorios()) {
-      	this.arrNoticias.push(this.newNoticia);
-		this.newNoticia = {
-			'titulo': "",
-			'imagen': "",
-			'texto': "",
-			'fecha': "",
-		};
+  	publicar() {
+		if (this.camposObligatorios()) {
+			this.arrNoticias.push(this.newNoticia);
+			this.newNoticia = {
+				'titulo': "",
+				'imagen': "",
+				'texto': "",
+				'fecha': "",
+			};
 		console.log(this.arrNoticias)
+		alert('¡Enhorabuena, su noticia se ha publicado satisfactoriamente!');
     } else {
 		alert('Por favor, complete todos los campos para enviar la noticia');
 		}
