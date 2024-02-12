@@ -28,4 +28,19 @@ export class NoticiasComponent {
     }
     console.log(this.newNoticia)
   }
+
+  cargarNoticias(): string {
+    let html = "";
+    this.arrNoticias.forEach((noticia) => { 
+      html += `
+        <div class="noticia">
+          <h2>${noticia.titulo}</h2>
+          <img src="${noticia.imagen}" alt="${noticia.titulo}">
+          <p>${noticia.texto}</p>
+          <p>${noticia.fecha}</p>
+        </div>
+      `;
+    });
+    return html;
+  }
 }
