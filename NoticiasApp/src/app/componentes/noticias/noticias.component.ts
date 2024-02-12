@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-noticias',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './noticias.component.html',
   styleUrl: './noticias.component.css'
 })
