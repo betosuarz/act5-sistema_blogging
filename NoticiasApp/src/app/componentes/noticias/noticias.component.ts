@@ -45,4 +45,3 @@ export class NoticiasComponent {
     return html;
   }   
 }
-
